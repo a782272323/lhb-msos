@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>lhb.msos.backend</groupId>
     <artifactId>lhb-msos-dependencies</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <!-- todo 百度 -->
@@ -162,6 +162,11 @@
 
             <!-- Others Begin -->
             <!-- Others End -->
+
+            <!-- a782272323 github 依赖 Begin -->
+
+            <!-- a782272323 github 依赖 End -->
+
         </dependencies>
     </dependencyManagement>
 
@@ -184,6 +189,7 @@
             </snapshots>
         </repository>
     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>spring-milestone</id>
@@ -202,4 +208,13 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
+    <!-- 发送jar到github的packages仓库 -->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>
+        </repository>
+    </distributionManagement>
 </project>

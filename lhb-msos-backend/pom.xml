@@ -11,7 +11,7 @@
 
     <groupId>lhb.msos.backend</groupId>
     <artifactId>lhb-msos-backend</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>lhb-msos-backend</name>
     <description>父(root)工程依赖pom</description>
