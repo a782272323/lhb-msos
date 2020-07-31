@@ -19,6 +19,7 @@
     <modules>
         <module>lhb-msos-dependencies</module>
         <module>lhb-msos-commons</module>
+        <module>lhb-msos-provider</module>
     </modules>
 
     <!-- 指定java jdk和编码 -->
