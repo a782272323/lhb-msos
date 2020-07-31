@@ -20,8 +20,11 @@
     <!-- 依赖版本号管理 -->
     <properties>
         <!-- Commons -->
+        <commons-lang3.version>3.9</commons-lang3.version>
         <okhttp3.version>4.2.2</okhttp3.version>
         <feign-okhttp.version>10.3.0</feign-okhttp.version>
+        <!-- Spring Boot -->
+        <spring-boot-dependencies.version>2.2.0.RELEASE</spring-boot-dependencies.version>
         <!-- Native Cloud -->
         <dubbo.version>2.7.3</dubbo.version>
         <dubbo-nacos.version>1.1.3</dubbo-nacos.version>
@@ -31,6 +34,9 @@
         <alibaba-spring-context-support.version>1.0.2</alibaba-spring-context-support.version>
         <!-- 数据库相关DataSource -->
         <!-- Others -->
+        <swagger2.version>2.9.2</swagger2.version><!-- swagger2 -->
+        <jackson.version>2.9.5</jackson.version>
+        <guava.version>28.2-jre</guava.version>
 
     </properties>
 
@@ -51,6 +57,17 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Spring Boot Begin -->
+            <!-- 所有springboot的依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+                <type>pom</type>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Spring Boot Begin -->
 
             <!-- Spring Cloud Begin-->
             <dependency>
@@ -166,9 +183,48 @@
                 <artifactId>feign-okhttp</artifactId>
                 <version>${feign-okhttp.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
             <!-- Commons End -->
 
             <!-- Others Begin -->
+            <!-- swagger2 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+            <!-- json转换，jackson -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <!-- Guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+                <scope>provided</scope>
+            </dependency>
             <!-- Others End -->
 
             <!-- a782272323 github 依赖 Begin -->
