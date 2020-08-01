@@ -5,15 +5,16 @@
 
     <parent>
         <groupId>lhb.msos.backend</groupId>
-        <artifactId>lhb-msos-commons</artifactId>
+        <artifactId>lhb-msos-dependencies</artifactId>
         <version>0.1.0-SNAPSHOT</version>
+        <!--        <relativePath>../lhb-msos-dependencies/pom.xml</relativePath>-->
     </parent>
 
-    <artifactId>commons-domain</artifactId>
-    <packaging>jar</packaging>
-    <name>commons-domain</name>
-    <inceptionYear>2020-Now</inceptionYear>
-    <description>通用的领域模型模块</description>
+    <artifactId>lhb-msos-provider</artifactId>
+    <packaging>pom</packaging>
+    <name>lhb-msos-provider</name>
+    <inceptionYear>2020-now</inceptionYear>
+    <description>服务提供者模块</description>
 
     <licenses>
         <license>
@@ -30,4 +31,16 @@
         </developer>
     </developers>
 
+    <!-- 发送jar到github的packages仓库 -->
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>github</id>-->
+<!--            <name>GitHub OWNER Apache Maven Packages</name>-->
+<!--            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>-->
+<!--        </repository>-->
+<!--    </distributionManagement>-->
+
+    <modules>
+        <module>provider-user</module>
+    </modules>
 </project>

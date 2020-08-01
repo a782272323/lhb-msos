@@ -48,7 +48,7 @@ public class BaseResult extends HashMap<String,Object> {
 
     }
 
-    /**
+    /** s
      * 返回 HTTP 和 消息
      * @param code
      * @param message

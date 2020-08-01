@@ -7,10 +7,11 @@
         <groupId>lhb.msos.backend</groupId>
         <artifactId>lhb-msos-dependencies</artifactId>
         <version>0.1.0-SNAPSHOT</version>
+        <!--        <relativePath>../lhb-msos-dependencies/pom.xml</relativePath>-->
     </parent>
 
     <artifactId>lhb-msos-commons</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <inceptionYear>2020-Now</inceptionYear>
     <name>lhb-msos-commons</name>
     <description>通用模块</description>
@@ -25,10 +26,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--        </dependency>-->
         <!-- Spring Boot End -->
 
         <!-- Commons Begin -->
@@ -93,9 +94,4 @@
         </repository>
     </distributionManagement>
 
-    <modules>
-        <module>commons-constant</module>
-        <module>commons-domain</module>
-        <module>commons-utils</module>
-    </modules>
 </project>
