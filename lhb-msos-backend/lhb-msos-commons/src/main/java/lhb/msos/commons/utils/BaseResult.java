@@ -244,6 +244,4 @@ public class BaseResult extends HashMap<String,Object> {
         private static final String MESSAGE = "message";
         private static final String TIMESTAMP = "timestamp";
     }
-
-
 }

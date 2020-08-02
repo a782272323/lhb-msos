@@ -9,11 +9,11 @@
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>provider-user</artifactId>
+    <artifactId>provider-security-client</artifactId>
     <packaging>jar</packaging>
-    <name>provider-user</name>
+    <name>provider-security-client</name>
     <inceptionYear>2020-Now</inceptionYear>
-    <description>用户服务，包括三端(门户网页，后台网页，小程序)</description>
+    <description>资源授权服务</description>
 
     <licenses>
         <license>
@@ -53,31 +53,21 @@
         <!-- Apache Dubbo End -->
 
         <!-- github 梁鸿斌的依赖 begin -->
-        <!-- 通用包依赖 -->
         <dependency>
             <groupId>lhb.msos.backend</groupId>
             <artifactId>lhb-msos-commons</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
-        <!-- 资源服务依赖 -->
-        <dependency>
-            <groupId>lhb.msos.backend</groupId>
-            <artifactId>provider-security-client</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
         <!-- github 梁鸿斌的依赖 End -->
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>lhb.msos.provider.user.ProviderUserApplication</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <!-- 发送jar到github的packages仓库 -->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>
+        </repository>
+    </distributionManagement>
 
 </project>
