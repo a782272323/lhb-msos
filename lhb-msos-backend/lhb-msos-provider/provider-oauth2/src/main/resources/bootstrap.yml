@@ -2,8 +2,12 @@ server:
   port: 10010
 
 spring:
+  # 服务名
   application:
     name: provider-oauth2-server
+  # 服务环境
+  profiles:
+    active: dev
   # nacos 服务注册中心
   cloud:
     nacos:
