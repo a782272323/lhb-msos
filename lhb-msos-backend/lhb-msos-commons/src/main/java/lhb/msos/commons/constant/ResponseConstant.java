@@ -21,5 +21,17 @@ public class ResponseConstant {
      * 返回表单的数据条数
      */
     public static final String COUNT = "count";
+    /**
+     * http响应代码
+     */
+    private static final String CODE = "code";
+    /**
+     * 响应信息
+     */
+    private static final String MESSAGE = "message";
+    /**
+     * 时间戳
+     */
+    private static final String TIMESTAMP = "timestamp";
 
 }

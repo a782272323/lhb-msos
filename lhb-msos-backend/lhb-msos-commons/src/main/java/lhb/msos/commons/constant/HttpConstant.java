@@ -58,6 +58,20 @@ public class HttpConstant {
     public static final String ACCESS_DENIED_MESSAGE = "该用户权限不足以访问该资源接口";
 
     /**
+     * 404
+     * 非法token/token不正确
+     */
+    public static final Integer ILLEGAL_TOKEN = 404;
+    public static final String ILLEGAL_TOKEN_MESSAGE = "非法token/token不正确";
+
+    /**
+     * 405
+     * 其他设备已经登录,是否挤下线
+     */
+    public static final Integer HAVE_LOGIN = 405;
+    public static final String HAVE_LOGIN_MESSAGE = "其他设备已经登录,是否挤下线";
+
+    /**
      * 410
      * 保存失败
      */
