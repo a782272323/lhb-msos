@@ -73,8 +73,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
                 // 以下为配置所需保护的资源路径及权限，需要与认证服务器配置的授权部分对应
                 .antMatchers("/lhb/**").hasAnyAuthority("ppp")
+                .antMatchers("/test/v1").hasAnyAuthority("123")
 
         ;
+
         // 其余接口没有角色限制，但需要经过认证，只要携带token就可以放行
         http.authorizeRequests().anyRequest().authenticated();
     }
