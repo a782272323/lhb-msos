@@ -84,6 +84,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         logger.debug("RESOURCE_ID = " + RESOURCE_ID);
+        System.out.println("RESOURCE_ID = " + RESOURCE_ID);
         resources
                 .expressionHandler(expressionHandler)
                 // 资源id

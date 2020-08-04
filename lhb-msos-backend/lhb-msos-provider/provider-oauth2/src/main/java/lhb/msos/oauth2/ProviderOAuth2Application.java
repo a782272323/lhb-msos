@@ -12,7 +12,6 @@ import org.springframework.context.annotation.ComponentScan;
  * @time 00:14
  */
 @SpringBootApplication
-// 指定扫描资源服务包
 @ComponentScan(basePackages = {"lhb.msos"})
 @EnableDiscoveryClient
 public class ProviderOAuth2Application {

@@ -11,7 +11,7 @@ Spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 172.16.253.153:8848
+        server-addr: 172.16.253.110:8848
   main:
     allow-bean-definition-overriding: true
   # redis 配置

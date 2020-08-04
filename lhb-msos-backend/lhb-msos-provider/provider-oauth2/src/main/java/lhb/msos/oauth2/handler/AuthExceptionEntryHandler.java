@@ -1,4 +1,4 @@
-package lhb.msos.security.client.handler;
+package lhb.msos.oauth2.handler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lhb.msos.commons.constant.HttpConstant;
@@ -13,9 +13,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @Description 自定义异常处理类
@@ -39,10 +36,10 @@ public class AuthExceptionEntryHandler implements AuthenticationEntryPoint {
      */
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
-
         Throwable cause = authException.getCause();
-        response.setStatus(HttpServletResponse.SC_OK);
+
         response.setContentType("application/json; charset=UTF-8");
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         // CORS "pre-flight" request
         response.addHeader("Access-Control-Allow-Origin", "*");
         response.addHeader("Cache-Control","no-cache");
@@ -58,6 +55,5 @@ public class AuthExceptionEntryHandler implements AuthenticationEntryPoint {
             log.error("没有登录");
             response.getWriter().write(mapper.writeValueAsString(BaseResult.error(HttpConstant.NOT_LOGIN,HttpConstant.NOT_LOGIN_MESSAGE)));
         }
-
     }
 }

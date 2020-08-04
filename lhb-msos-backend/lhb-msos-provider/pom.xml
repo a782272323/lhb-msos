@@ -41,8 +41,8 @@
 <!--    </distributionManagement>-->
 
     <modules>
+        <module>provider-security-client</module>
         <module>provider-oauth2</module>
         <module>provider-user</module>
-        <module>provider-security-client</module>
     </modules>
 </project>

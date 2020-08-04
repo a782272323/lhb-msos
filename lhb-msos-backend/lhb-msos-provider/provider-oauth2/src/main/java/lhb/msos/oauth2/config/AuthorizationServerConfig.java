@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -75,6 +76,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Resource
     private RedisConnectionFactory connectionFactory;
 
+    @Resource
+    private UserDetailsService userDetailsService;
+
     /**
      * 使用redis来存储令牌
      * @return
@@ -99,7 +103,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 // 加密
                 .secret(passwordEncoder.encode(CLIENT_SECRET))
                 // 资源id
-                .resourceIds(RESOURCE_ID)
+//                .resourceIds(RESOURCE_ID)
                 // 授权模式
                 .authorizedGrantTypes(GRANT_TYPE[0], GRANT_TYPE[1])
                 // 允许授权的范围
@@ -119,7 +123,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 // 开启/oauth/token_key验证端口无权限访问
                 .tokenKeyAccess("permitAll()")
                 // /oauth/check_token 公开
-                .checkTokenAccess("permitAll()")
+                .checkTokenAccess("isAuthenticated()")
                 // 允许表单验证（前端），申请令牌
                 .allowFormAuthenticationForClients()
         ;
@@ -137,6 +141,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints
+                .userDetailsService(userDetailsService)
                 // 令牌存redis
                 .tokenStore(redisTokenStore())
                 // 认证管理器,支持密码模式

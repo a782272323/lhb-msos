@@ -33,11 +33,6 @@
         <!-- Spring Boot End -->
 
         <!-- Spring Cloud Begin -->
-        <!-- oauth2 依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-oauth2</artifactId>
-        </dependency>
         <!-- feign 依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

@@ -65,7 +65,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 "/plugins/**",
                 "/favicon.ico",
                 "/actuator/**",
-                "/oauth/user");
+                "/oauth/user",
+                "/oauth/check_token");
     }
 
 
