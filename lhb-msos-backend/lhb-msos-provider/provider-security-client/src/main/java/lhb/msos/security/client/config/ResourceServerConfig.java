@@ -83,7 +83,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-        System.out.println("RESOURCE_ID = " + RESOURCE_ID);
+        logger.debug("RESOURCE_ID = " + RESOURCE_ID);
         resources
                 .expressionHandler(expressionHandler)
                 // 资源id
@@ -93,7 +93,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 // 自定义异常处理,token权限不够的处理
                 .accessDeniedHandler(new CustomAccessDeniedHandler())
         // 在这些资源上只允许基于令牌的身份验证。(具体干哈不清楚)
-//                    .stateless(true)
+                    .stateless(true)
         ;
 
     }
