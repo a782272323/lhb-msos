@@ -43,7 +43,15 @@
         <!-- Spring Boot End -->
 
         <!-- Spring Cloud Begin -->
-
+        <!-- oauth2 依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-security</artifactId>
+        </dependency>
         <!-- Spring Cloud End -->
 
         <!-- Spring Cloud Alibaba Begin -->

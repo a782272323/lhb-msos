@@ -37,9 +37,8 @@ public class AuthExceptionEntryHandler implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
         Throwable cause = authException.getCause();
-
+        response.setStatus(HttpServletResponse.SC_OK);
         response.setContentType("application/json; charset=UTF-8");
-        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         // CORS "pre-flight" request
         response.addHeader("Access-Control-Allow-Origin", "*");
         response.addHeader("Cache-Control","no-cache");
@@ -55,5 +54,8 @@ public class AuthExceptionEntryHandler implements AuthenticationEntryPoint {
             log.error("没有登录");
             response.getWriter().write(mapper.writeValueAsString(BaseResult.error(HttpConstant.NOT_LOGIN,HttpConstant.NOT_LOGIN_MESSAGE)));
         }
+        log.debug("登录校验成功");
+        System.out.println("登录校验成功");
+
     }
 }

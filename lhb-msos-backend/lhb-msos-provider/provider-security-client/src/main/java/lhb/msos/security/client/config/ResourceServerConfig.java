@@ -87,7 +87,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         resources
                 .expressionHandler(expressionHandler)
                 // 资源id
-                .resourceId(RESOURCE_ID)
+//                .resourceId(RESOURCE_ID)
                 // 自定义异常处理,token过期或失效的处理
                 .authenticationEntryPoint(new AuthExceptionEntryHandler())
                 // 自定义异常处理,token权限不够的处理
