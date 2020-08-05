@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @date 2020/8/5
  * @time 09:00
  */
-@SpringBootApplication(scanBasePackages = {"lhb.msos"})
+@SpringBootApplication
 @EnableDiscoveryClient
 @ComponentScan(basePackages = {"lhb.msos"})
 @EnableFeignClients(basePackages = "lhb.msos.feign.*")

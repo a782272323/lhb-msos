@@ -23,6 +23,7 @@ public class SentinelHandler {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     /**
+     * todo 全局异常统一处理要搞
      * 到达sentinel限流设置的最大阀值/上限
      * @param exception
      * @return

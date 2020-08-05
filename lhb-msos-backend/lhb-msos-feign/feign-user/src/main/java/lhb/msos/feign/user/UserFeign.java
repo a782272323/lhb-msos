@@ -19,4 +19,7 @@ public interface UserFeign {
 
     @GetMapping("/user/test")
     public BaseResult test(@RequestParam("name") String name);
+
+    @GetMapping("/port/test")
+    public BaseResult portTest();
 }

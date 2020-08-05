@@ -1,6 +1,6 @@
 server:
-  port: 10000
-spring:
+  port: 12000
+Spring:
   # nacos 服务注册中心
   cloud:
     nacos:
@@ -15,4 +15,4 @@ spring:
 # 日志级别
 logging:
   level:
-    lhb.msos.provider.user: debug
+    lhb.msos.consumer.help.center: debug

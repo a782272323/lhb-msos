@@ -17,4 +17,9 @@ public class UserFeignFallback implements UserFeign {
     public BaseResult test(String name) {
         return BaseResult.error("用户服务远程调用出现异常!");
     }
+
+    @Override
+    public BaseResult portTest() {
+        return BaseResult.error("用户服务远程调用出现异常!");
+    }
 }

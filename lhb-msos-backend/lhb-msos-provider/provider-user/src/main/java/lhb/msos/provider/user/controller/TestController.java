@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-//    @Autowired
-//    private OAuth2Remote oAuth2Remote;
 
     @Value("${spring.mvc.date-format}")
     private String nacosUrl;
+
+    @Value("${server.port}")
+    private String port;
 
 
     @GetMapping("/user/test")
@@ -21,10 +22,6 @@ public class TestController {
         return BaseResult.ok("用户服务提供者测试111,被" + name + "服务远程调用");
     }
 
-//    @GetMapping("/user/feign")
-//    public BaseResult test01(@RequestParam("username") String username) {
-//        return oAuth2Remote.testFeign(username);
-//    }
 
     @GetMapping("lhb/test")
     public BaseResult test02() {
@@ -44,5 +41,15 @@ public class TestController {
     @GetMapping("/config/test")
     public BaseResult configTest() {
         return BaseResult.ok("nacos的url为 = " + nacosUrl);
+    }
+
+    /**
+     * todo 负载均衡测试失败，有空解决
+     * feign负载均衡测试
+     * @return
+     */
+    @GetMapping("/port/test")
+    public BaseResult portTest() {
+        return BaseResult.ok("fegin负载均衡测试,端口号 = " + port);
     }
 }
