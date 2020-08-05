@@ -10,11 +10,11 @@
         <!--        <relativePath>../lhb-msos-dependencies/pom.xml</relativePath>-->
     </parent>
 
-    <artifactId>lhb-msos-provider</artifactId>
+    <artifactId>lhb-msos-consumer</artifactId>
     <packaging>pom</packaging>
-    <name>lhb-msos-provider</name>
+    <name>lhb-msos-consumer</name>
     <inceptionYear>2020-now</inceptionYear>
-    <description>服务提供者模块</description>
+    <description>服务消费者模块</description>
 
     <licenses>
         <license>
@@ -31,18 +31,7 @@
         </developer>
     </developers>
 
-    <!-- 发送jar到github的packages仓库 -->
-<!--    <distributionManagement>-->
-<!--        <repository>-->
-<!--            <id>github</id>-->
-<!--            <name>GitHub OWNER Apache Maven Packages</name>-->
-<!--            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>-->
-<!--        </repository>-->
-<!--    </distributionManagement>-->
-
     <modules>
-        <module>provider-security-client</module>
-        <module>provider-oauth2</module>
-        <module>provider-user</module>
+        <module>consumer-help-center</module>
     </modules>
 </project>

@@ -8,6 +8,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 /**
  * @Description  登录校验逻辑实现类
@@ -15,12 +17,13 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  * @date 2020/8/3
  * @time 01:26
  */
+@Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -28,8 +31,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         String password = passwordEncoder.encode("123456");
         log.trace("password = {}", password);
         UserDetails userDetails =
-                User.withUsername("lhb")
-                        .password(password).authorities("ppp").build();
+                User.withUsername(username)
+                        .password(passwordEncoder.encode("123456"))
+                        .authorities("ROLE_ADMIN")
+                        .build();
         return userDetails;
     }
 

@@ -1,9 +1,9 @@
 server:
-  port: 10000
+  port: 12000
 Spring:
   # 服务名
   application:
-    name: provider-user
+    name: consumer-help-center
   # 环境
   profiles:
     active: dev

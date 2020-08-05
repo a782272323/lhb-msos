@@ -5,15 +5,15 @@
 
     <parent>
         <groupId>lhb.msos.backend</groupId>
-        <artifactId>lhb-msos-provider</artifactId>
+        <artifactId>lhb-msos-consumer</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>provider-user</artifactId>
+    <artifactId>consumer-help-center</artifactId>
     <packaging>jar</packaging>
-    <name>provider-user</name>
+    <name>consumer-help-center</name>
     <inceptionYear>2020-Now</inceptionYear>
-    <description>用户服务，包括三端(门户网页，后台网页，小程序)</description>
+    <description>帮助中心，包括更新日志和帮助文档</description>
 
     <licenses>
         <license>
@@ -54,33 +54,33 @@
 
         <!-- github 梁鸿斌的依赖 begin -->
         <!-- 通用包依赖 -->
-<!--        <dependency>-->
-<!--            <groupId>lhb.msos.backend</groupId>-->
-<!--            <artifactId>lhb-msos-commons</artifactId>-->
-<!--            <version>0.1.0-SNAPSHOT</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>lhb.msos.backend</groupId>-->
+        <!--            <artifactId>lhb-msos-commons</artifactId>-->
+        <!--            <version>0.1.0-SNAPSHOT</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>lhb.msos.backend</groupId>
             <artifactId>lhb-msos-commons</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <!-- 资源服务依赖 -->
-<!--        <dependency>-->
-<!--            <groupId>lhb.msos.backend</groupId>-->
-<!--            <artifactId>provider-security-client</artifactId>-->
-<!--            <version>0.1.0-SNAPSHOT</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>lhb.msos.backend</groupId>-->
-<!--            <artifactId>provider-security-client</artifactId>-->
-<!--            <version>${project.parent.version}</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>lhb.msos.backend</groupId>-->
+        <!--            <artifactId>provider-security-client</artifactId>-->
+        <!--            <version>0.1.0-SNAPSHOT</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>lhb.msos.backend</groupId>-->
+        <!--            <artifactId>provider-security-client</artifactId>-->
+        <!--            <version>${project.parent.version}</version>-->
+        <!--        </dependency>-->
         <!-- github 梁鸿斌的依赖 End -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-oauth2</artifactId>-->
-<!--        </dependency>-->
-        <!-- fegin 依赖 -->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-oauth2</artifactId>-->
+        <!--        </dependency>-->
+        <!-- 用户服务远程调用 -->
         <dependency>
             <groupId>lhb.msos.backend</groupId>
             <artifactId>feign-user</artifactId>
@@ -94,7 +94,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>lhb.msos.provider.user.ProviderUserApplication</mainClass>
+                    <mainClass>lhb.msos.consumer.help.center.ConsumerHelpCenterApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

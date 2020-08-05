@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.8.RELEASE</version>
+        <version>2.1.9.RELEASE</version>
     </parent>
 
     <groupId>lhb.msos.backend</groupId>
@@ -18,7 +18,9 @@
     <modules>
         <module>lhb-msos-dependencies</module>
         <module>lhb-msos-commons</module>
+        <module>lhb-msos-feign</module>
         <module>lhb-msos-provider</module>
+        <module>lhb-msos-consumer</module>
     </modules>
 
     <!-- 指定java jdk和编码 -->
@@ -48,17 +50,17 @@
     </developers>
 
     <!-- 这里与dependencies相互依赖来实现jar依赖包的管理 -->
-<!--    <dependencyManagement>-->
-<!--        <dependencies>-->
-<!--            <dependency>-->
-<!--                <groupId>lhb.msos.backend</groupId>-->
-<!--                <artifactId>lhb-msos-dependencies</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
-<!--        </dependencies>-->
-<!--    </dependencyManagement>-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>lhb.msos.backend</groupId>
+                <artifactId>lhb-msos-dependencies</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <!-- 多环境配置，比如dev，prod，test环境-->
     <profiles>

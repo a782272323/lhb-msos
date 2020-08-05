@@ -3,7 +3,7 @@ server:
 Spring:
   # 服务名
   application:
-    name: provider-user-server
+    name: provider-user
   # 环境
   profiles:
     active: test
