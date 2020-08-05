@@ -98,4 +98,11 @@ public class HttpConstant {
      */
     public static final Integer ERROR = 500;
     public static final String ERROR_MESSAGE = "服务器内部异常，请联系管理员";
+
+    /**
+     * 501
+     * 该接口到达阀值(上限)了，请稍后重试
+     */
+    public static final Integer MAX_REQUEST = 501;
+    public static final String MAX_REQUEST_MESSAGE = "该接口到达阀值(上限)了，请稍后重试";
 }
