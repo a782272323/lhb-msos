@@ -1,0 +1,37 @@
+spring:
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+  aop:
+      auto: true
+  # jackson 日期格式化
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  main:
+    allow-bean-definition-overriding: true
+# feign配置
+feign:
+  # 开启feign对sentinel的支持
+  sentinel:
+    enabled: true
+# 端点检查（健康检查）
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+# 日志级别
+logging:
+  level:
+    # 通用包日志打印
+    lhb:
+      msos:
+        commons: debug
+    # springboot 日志打印
+    org:
+      springframework:
+        boot:
+          autoconfigure: error

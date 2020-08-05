@@ -26,7 +26,7 @@
         <okhttp3.version>4.2.2</okhttp3.version>
         <feign-okhttp.version>10.3.0</feign-okhttp.version>
         <!-- Spring Boot -->
-        <spring-boot-dependencies.version>2.2.0.RELEASE</spring-boot-dependencies.version>
+        <spring-boot-dependencies.version>2.1.9.RELEASE</spring-boot-dependencies.version>
         <!-- Native Cloud -->
         <revision>2.2.1.RELEASE</revision>
         <dubbo.version>2.7.3</dubbo.version>

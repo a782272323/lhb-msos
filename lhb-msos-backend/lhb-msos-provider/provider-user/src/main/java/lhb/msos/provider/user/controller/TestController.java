@@ -1,6 +1,7 @@
 package lhb.msos.provider.user.controller;
 
 import lhb.msos.commons.utils.BaseResult;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +11,9 @@ public class TestController {
 
 //    @Autowired
 //    private OAuth2Remote oAuth2Remote;
+
+    @Value("${spring.mvc.date-format}")
+    private String nacosUrl;
 
 
     @GetMapping("/user/test")
@@ -31,5 +35,14 @@ public class TestController {
     public BaseResult test03() {
         System.out.println("**** 111 ***");
         return BaseResult.ok("lhb111");
+    }
+
+    /**
+     * 远程配置文件测试
+     * @return
+     */
+    @GetMapping("/config/test")
+    public BaseResult configTest() {
+        return BaseResult.ok("nacos的url为 = " + nacosUrl);
     }
 }
