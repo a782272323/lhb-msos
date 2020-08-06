@@ -23,6 +23,11 @@ management:
   endpoint:
     health:
       show-details: always
+# 获取身份认证地址
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:10010/oauth2/info
 # 日志级别
 logging:
   level:

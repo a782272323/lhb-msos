@@ -15,9 +15,6 @@ spring:
         # 开发环境选择 192.168.1.101的机子
         namespace: 5e3a0c5c-3ff5-4c65-8d4d-fcee2fa88ad8
         # 多个配置文件依赖，共享配置文件
-        shared-configs: commons.yml,database-redis.yml
-# 获取身份认证地址
-security:
-  oauth2:
-    resource:
-      user-info-uri: http://localhost:10010/oauth2/info
+        shared-configs:
+          - commons.yml
+          - database-redis.yml

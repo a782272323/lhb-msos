@@ -67,7 +67,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
                 // 下边路径放行,不需要认证
                 // 门户网站前缀的接口，直接放行
-                .antMatchers("/portal/**").permitAll()
+                .antMatchers("/web/**").permitAll()
                 // OPTIONS请求不需要鉴权
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 

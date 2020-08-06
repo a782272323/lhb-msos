@@ -16,9 +16,3 @@ spring:
         namespace: 3c6dbb52-ef0d-4515-90e4-ac0dd6752622
         # 多个配置文件依赖，共享配置文件
         shared-configs: commons.yml,database.yml
-# oauth2身份校验地址
-#security:
-#  oauth2:
-#    resource:
-#      user-info-uri: http://localhost:12000
-#      id: provider-user

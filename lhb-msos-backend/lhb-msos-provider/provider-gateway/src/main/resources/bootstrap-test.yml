@@ -1,10 +1,10 @@
 server:
-  port: 12000
+  port: 10020
 
 spring:
   # 服务名
   application:
-    name: consumer-help-center
+    name: provider-gateway
   cloud:
     nacos:
       config:

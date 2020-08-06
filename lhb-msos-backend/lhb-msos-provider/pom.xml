@@ -41,8 +41,9 @@
 <!--    </distributionManagement>-->
 
     <modules>
-        <module>provider-security-client</module>
-        <module>provider-oauth2</module>
+        <module>provider-security-client</module> <!-- 1 -->
+        <module>provider-oauth2</module> <!-- 2 -->
         <module>provider-user</module>
+        <module>provider-gateway</module><!-- 网关一定放最后面 -->
     </modules>
 </project>

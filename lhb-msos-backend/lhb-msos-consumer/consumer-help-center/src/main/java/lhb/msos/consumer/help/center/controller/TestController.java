@@ -29,12 +29,15 @@ public class TestController {
     @Value("${spring.application.name}")
     private String serverName;
 
+    @Value("${spring.mvc.date-format}")
+    String dateFormat;
+
     @Autowired
     private UserFeign userFeign;
 
     @GetMapping("/help/center/test")
     public BaseResult test01() {
-        return BaseResult.ok("帮助中心服务测试");
+        return BaseResult.ok("帮助中心服务测试" + dateFormat);
     }
 
     /**
@@ -42,7 +45,7 @@ public class TestController {
      * 测试远程调用
      * @return
      */
-    @GetMapping("/help/center/feign/test")
+    @GetMapping("/manager/help/center/feign/test")
     public BaseResult feignTest() {
         return userFeign.test(serverName);
     }
