@@ -1,32 +1,35 @@
 server:
   port: 10010
-
 spring:
-  # 服务名
-  application:
-    name: provider-oauth2-server
-  # 服务环境
-  profiles:
-    active: dev
-  # nacos 服务注册中心
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 192.168.1.101:8848
   main:
     allow-bean-definition-overriding: true
-  # redis 配置
-  redis:
-    # redis一共16个库，本次项目使用第10个
-    database: 10
-    host: 47.95.206.128
-    port: 3379
-    # 超时时间 5s
-    timeout: 5000
-    password: 123456
-    jedis:
-      pool:
-        max-active: 8 #连接池最大连接数（使用负值表示没有限制）
-        max-idle: 8  #连接池中的最大空闲连接
-        max-wait: -1s #连接池最大阻塞等待时间（使用负值表示没有限制)
-        min-idle: 0  #连接池中的最小空闲连接
+  # 服务名
+  application:
+    name: provider-oauth2
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.1.101:8848
+        # 远程配置文件后缀名
+        file-extension: yml
+        # 测试环境选择 172.168.253.110的机子
+        # 开发环境选择 192.168.1.101的机子
+        namespace: 3c6dbb52-ef0d-4515-90e4-ac0dd6752622
+        # 多个配置文件依赖，共享配置文件
+        shared-configs: commons.yml,database.yml
+  # druid数据库连接池配置
+  datasource:
+    druid:
+      url: jdbc:mysql://47.95.206.128:3306/lhb-msos-db?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      # MySQL 8.x: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: lhb.msos.commons.domain, lhb.msos.provider.oauth2.domain

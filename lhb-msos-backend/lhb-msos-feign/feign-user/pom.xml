@@ -6,7 +6,7 @@
     <parent>
         <groupId>lhb.msos.backend</groupId>
         <artifactId>lhb-msos-feign</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>0.2.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>feign-user</artifactId>
@@ -54,32 +54,18 @@
 
         <!-- github 梁鸿斌的依赖 begin -->
         <!-- 通用包依赖 -->
-        <!--        <dependency>-->
-        <!--            <groupId>lhb.msos.backend</groupId>-->
-        <!--            <artifactId>lhb-msos-commons</artifactId>-->
-        <!--            <version>0.1.0-SNAPSHOT</version>-->
-        <!--        </dependency>-->
         <dependency>
             <groupId>lhb.msos.backend</groupId>
             <artifactId>lhb-msos-commons</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <!-- 资源服务依赖 -->
-        <!--        <dependency>-->
-        <!--            <groupId>lhb.msos.backend</groupId>-->
-        <!--            <artifactId>provider-security-client</artifactId>-->
-        <!--            <version>0.1.0-SNAPSHOT</version>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>lhb.msos.backend</groupId>-->
-        <!--            <artifactId>provider-security-client</artifactId>-->
-        <!--            <version>${project.parent.version}</version>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>lhb.msos.backend</groupId>
+            <artifactId>provider-security-client</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
         <!-- github 梁鸿斌的依赖 End -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.cloud</groupId>-->
-        <!--            <artifactId>spring-cloud-starter-oauth2</artifactId>-->
-        <!--        </dependency>-->
     </dependencies>
 
 <!--    <build>-->

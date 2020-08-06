@@ -1,4 +1,4 @@
-package lhb.msos.oauth2.service;
+package lhb.msos.provider.oauth2.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,10 +30,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         // todo 暂时模拟用户登录
         String password = passwordEncoder.encode("123456");
         log.trace("password = {}", password);
+        System.out.println("password = " + password);
         UserDetails userDetails =
-                User.withUsername(username)
-                        .password(passwordEncoder.encode("123456"))
-                        .authorities("ROLE_ADMIN")
+                User.withUsername("lhb")
+                        .password(password)
+                        .authorities("ROLE_USER")
                         .build();
         return userDetails;
     }

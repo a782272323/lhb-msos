@@ -6,7 +6,7 @@
     <parent>
         <groupId>lhb.msos.backend</groupId>
         <artifactId>lhb-msos-consumer</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>0.2.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>consumer-help-center</artifactId>
@@ -70,22 +70,18 @@
         <!--            <artifactId>provider-security-client</artifactId>-->
         <!--            <version>0.1.0-SNAPSHOT</version>-->
         <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>lhb.msos.backend</groupId>-->
-        <!--            <artifactId>provider-security-client</artifactId>-->
-        <!--            <version>${project.parent.version}</version>-->
-        <!--        </dependency>-->
-        <!-- github 梁鸿斌的依赖 End -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.cloud</groupId>-->
-        <!--            <artifactId>spring-cloud-starter-oauth2</artifactId>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>lhb.msos.backend</groupId>
+            <artifactId>provider-security-client</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
         <!-- 用户服务远程调用 -->
         <dependency>
             <groupId>lhb.msos.backend</groupId>
             <artifactId>feign-user</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <!-- github 梁鸿斌的依赖 End -->
     </dependencies>
 
     <build>

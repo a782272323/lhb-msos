@@ -13,6 +13,6 @@ spring:
         file-extension: yml
         # 测试环境选择 172.168.253.110的机子
         # 开发环境选择 192.168.1.101的机子
-        namespace: 3c6dbb52-ef0d-4515-90e4-ac0dd6752622
+        namespace: 5e3a0c5c-3ff5-4c65-8d4d-fcee2fa88ad8
         # 多个配置文件依赖，共享配置文件
-        shared-configs: commons.yml,database.yml
+        shared-configs: commons.yml,database-redis.yml

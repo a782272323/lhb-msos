@@ -6,7 +6,7 @@
     <parent>
         <groupId>lhb.msos.backend</groupId>
         <artifactId>lhb-msos-backend</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>0.2.0-SNAPSHOT</version>
         <!--        <relativePath>../lhb-msos-dependencies/pom.xml</relativePath>-->
     </parent>
 

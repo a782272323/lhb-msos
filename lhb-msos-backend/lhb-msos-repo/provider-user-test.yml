@@ -1,5 +1,3 @@
-server:
-  port: 10000
 spring:
   # nacos 服务注册中心
   cloud:

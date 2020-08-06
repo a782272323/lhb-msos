@@ -1,4 +1,4 @@
-spring:
+Spring:
   # nacos 服务注册中心
   cloud:
     nacos:
@@ -13,4 +13,4 @@ spring:
 # 日志级别
 logging:
   level:
-    lhb.msos.provider.user: debug
+    lhb.msos.provider.oauth2: debug

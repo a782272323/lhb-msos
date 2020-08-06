@@ -37,6 +37,11 @@ public class TestController {
         return BaseResult.ok("帮助中心服务测试");
     }
 
+    /**
+     * todo 远程调用时，token出现权限认证失败
+     * 测试远程调用
+     * @return
+     */
     @GetMapping("/help/center/feign/test")
     public BaseResult feignTest() {
         return userFeign.test(serverName);

@@ -6,7 +6,7 @@
 <parent>
     <groupId>lhb.msos.backend</groupId>
     <artifactId>lhb-msos-provider</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
 </parent>
 
 <artifactId>provider-oauth2</artifactId>
@@ -43,6 +43,11 @@
     <!-- Spring Boot End -->
 
     <!-- Spring Cloud Begin -->
+    <!-- oauth2 依赖 -->
+<!--    <dependency>-->
+<!--        <groupId>org.springframework.cloud</groupId>-->
+<!--        <artifactId>spring-cloud-starter-oauth2</artifactId>-->
+<!--    </dependency>-->
     <!-- Spring Cloud End -->
 
     <!-- Spring Cloud Alibaba Begin -->
@@ -50,6 +55,29 @@
 
     <!-- Apache Dubbo Begin -->
     <!-- Apache Dubbo End -->
+
+    <!-- 数据库相关DataSource Begin -->
+    <!-- 整合druid -->
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+    </dependency>
+    <!-- MySQL -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.47</version>
+    </dependency>
+    <!-- mybatis -->
+    <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+    </dependency>
+    <!-- 数据库相关DataSource End -->
 
     <!-- github 梁鸿斌的依赖 begin -->
     <!-- 通用包依赖 -->
@@ -69,17 +97,13 @@
 <!--        <artifactId>provider-security-client</artifactId>-->
 <!--        <version>0.1.0-SNAPSHOT</version>-->
 <!--    </dependency>-->
-<!--    <dependency>-->
-<!--        <groupId>lhb.msos.backend</groupId>-->
-<!--        <artifactId>provider-security-client</artifactId>-->
-<!--        <version>${project.parent.version}</version>-->
-<!--    </dependency>-->
+    <dependency>
+        <groupId>lhb.msos.backend</groupId>
+        <artifactId>provider-security-client</artifactId>
+        <version>${project.parent.version}</version>
+    </dependency>
     <!-- github 梁鸿斌的依赖 End -->
 
-    <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-oauth2</artifactId>
-    </dependency>
 </dependencies>
 
 <build>
@@ -88,7 +112,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
             <configuration>
-                <mainClass>lhb.msos.oauth2.ProviderOAuth2Application</mainClass>
+                <mainClass>lhb.msos.provider.oauth2.ProviderOAuth2Application</mainClass>
             </configuration>
         </plugin>
     </plugins>

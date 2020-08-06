@@ -13,7 +13,7 @@
 
     <groupId>lhb.msos.backend</groupId>
     <artifactId>lhb-msos-dependencies</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>lhb-msos-dependencies</name>
     <inceptionYear>2020-now</inceptionYear>
@@ -36,10 +36,15 @@
         <spring-cloud-alibaba.verion>2.1.2.RELEASE</spring-cloud-alibaba.verion>
         <alibaba-spring-context-support.version>1.0.2</alibaba-spring-context-support.version>
         <!-- 数据库相关DataSource -->
+        <druid.version>1.1.10</druid.version>
+        <mysql.version>5.1.47</mysql.version>
+        <mybatis.version>2.1.0</mybatis.version>
+        <spring-jdbc.version>5.2.0.RELEASE</spring-jdbc.version>
         <!-- Others -->
         <swagger2.version>2.9.2</swagger2.version><!-- swagger2 -->
         <jackson.version>2.9.5</jackson.version>
         <guava.version>28.2-jre</guava.version>
+        <github-pageHelper.version>1.2.3</github-pageHelper.version>
 
     </properties>
 
@@ -96,6 +101,29 @@
             <!-- Apache Dubbo End -->
 
             <!-- 数据库相关DataSource Begin -->
+            <!-- 整合druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!-- MySQL -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring-jdbc.version}</version>
+            </dependency>
             <!-- 数据库相关DataSource End -->
 
             <!-- Commons Begin -->
@@ -153,6 +181,12 @@
                 <version>${guava.version}</version>
                 <scope>provided</scope>
             </dependency>
+            <!-- 分页插件 -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${github-pageHelper.version}</version>
+            </dependency>
             <!-- Others End -->
 
             <!-- a782272323 github 依赖 Begin -->
@@ -200,5 +234,14 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
+    <!-- 发送jar到github的packages仓库 -->
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>github</id>-->
+<!--            <name>GitHub OWNER Apache Maven Packages</name>-->
+<!--            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>-->
+<!--        </repository>-->
+<!--    </distributionManagement>-->
 
 </project>
