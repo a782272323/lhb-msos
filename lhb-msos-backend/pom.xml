@@ -18,8 +18,8 @@
     <modules>
         <module>lhb-msos-dependencies</module>
         <module>lhb-msos-commons</module>
-        <module>lhb-msos-feign</module>
         <module>lhb-msos-provider</module>
+        <module>lhb-msos-feign</module>
         <module>lhb-msos-consumer</module>
     </modules>
 
@@ -187,5 +187,7 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
+    <!-- todo 使用github做maven仓库出现问题，到时配合jenkins持续集成时看看会不会有影响-->
 
 </project>
