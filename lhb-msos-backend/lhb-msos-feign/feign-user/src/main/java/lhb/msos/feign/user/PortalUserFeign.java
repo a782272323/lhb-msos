@@ -16,6 +16,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient(name = "provider-portal-user", fallback = PortalUserFeignFallback.class)
 public interface PortalUserFeign {
 
-    @GetMapping("/feign")
+    @GetMapping("/portal/user/feign")
     public BaseResult feign();
 }

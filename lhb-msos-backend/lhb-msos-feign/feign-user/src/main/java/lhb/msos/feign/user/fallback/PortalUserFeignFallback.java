@@ -2,6 +2,7 @@ package lhb.msos.feign.user.fallback;
 
 import lhb.msos.commons.utils.BaseResult;
 import lhb.msos.feign.user.PortalUserFeign;
+import org.springframework.stereotype.Component;
 
 /**
  * @Description  熔断
@@ -9,6 +10,7 @@ import lhb.msos.feign.user.PortalUserFeign;
  * @date 2020/8/7
  * @time 10:49
  */
+@Component
 public class PortalUserFeignFallback implements PortalUserFeign {
     @Override
     public BaseResult feign() {
