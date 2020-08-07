@@ -31,15 +31,6 @@
         </developer>
     </developers>
 
-    <!-- 发送jar到github的packages仓库 -->
-<!--    <distributionManagement>-->
-<!--        <repository>-->
-<!--            <id>github</id>-->
-<!--            <name>GitHub OWNER Apache Maven Packages</name>-->
-<!--            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>-->
-<!--        </repository>-->
-<!--    </distributionManagement>-->
-
     <modules>
         <module>provider-security-client</module> <!-- 1 -->
         <module>provider-oauth2</module> <!-- 2 -->

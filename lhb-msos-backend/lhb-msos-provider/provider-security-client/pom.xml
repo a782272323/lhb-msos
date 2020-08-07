@@ -31,6 +31,11 @@
 
     <dependencies>
         <!-- Project Begin -->
+        <dependency>
+            <groupId>lhb.msos</groupId>
+            <artifactId>lhb-msos-commons</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
         <!-- Project End -->
 
         <!-- Spring Boot Begin -->
@@ -60,34 +65,8 @@
         <!-- Apache Dubbo Begin -->
         <!-- Apache Dubbo End -->
 
-        <!-- github 梁鸿斌的依赖 begin -->
-        <dependency>
-            <groupId>lhb.msos</groupId>
-            <artifactId>lhb-msos-commons</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <!-- github 梁鸿斌的依赖 End -->
     </dependencies>
 
-    <!-- 发送jar到github的packages仓库 -->
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>
-        </repository>
-    </distributionManagement>
 
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <artifactId>maven-deploy-plugin</artifactId>-->
-<!--                <version>2.8.1</version>-->
-<!--                <configuration>-->
-<!--                    <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
 
 </project>

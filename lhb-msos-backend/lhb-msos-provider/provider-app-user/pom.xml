@@ -32,26 +32,6 @@
 
     <dependencies>
         <!-- Project Begin -->
-        <!-- Project End -->
-
-        <!-- Spring Boot Begin -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!-- Spring Boot End -->
-
-        <!-- Spring Cloud Begin -->
-        <!-- Spring Cloud End -->
-
-        <!-- Spring Cloud Alibaba Begin -->
-        <!-- Spring Cloud Alibaba End -->
-
-        <!-- Apache Dubbo Begin -->
-        <!-- Apache Dubbo End -->
-
-        <!-- github 梁鸿斌的依赖 begin -->
         <!-- 通用包依赖 -->
         <dependency>
             <groupId>lhb.msos</groupId>
@@ -70,8 +50,24 @@
             <artifactId>feign-user</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <!-- github 梁鸿斌的依赖 End -->
+        <!-- Project End -->
 
+        <!-- Spring Boot Begin -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- Spring Boot End -->
+
+        <!-- Spring Cloud Begin -->
+        <!-- Spring Cloud End -->
+
+        <!-- Spring Cloud Alibaba Begin -->
+        <!-- Spring Cloud Alibaba End -->
+
+        <!-- Apache Dubbo Begin -->
+        <!-- Apache Dubbo End -->
 
     </dependencies>
 

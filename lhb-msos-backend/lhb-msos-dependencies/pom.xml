@@ -183,10 +183,6 @@
             </dependency>
             <!-- Others End -->
 
-            <!-- a782272323 github 依赖 Begin -->
-
-            <!-- a782272323 github 依赖 End -->
-
         </dependencies>
     </dependencyManagement>
 
@@ -229,13 +225,6 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <!-- 发送jar到github的packages仓库 -->
-<!--    <distributionManagement>-->
-<!--        <repository>-->
-<!--            <id>github</id>-->
-<!--            <name>GitHub OWNER Apache Maven Packages</name>-->
-<!--            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>-->
-<!--        </repository>-->
-<!--    </distributionManagement>-->
+
 
 </project>

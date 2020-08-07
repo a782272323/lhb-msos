@@ -78,9 +78,6 @@
         <!-- Apache Dubbo Begin -->
         <!-- Apache Dubbo End -->
 
-        <!-- github 梁鸿斌的依赖 begin -->
-        <!-- github 梁鸿斌的依赖 End -->
-
         <!-- Commons Begin -->
         <dependency>
             <groupId>javax.servlet</groupId>

@@ -32,6 +32,18 @@
 
 <dependencies>
     <!-- Project Begin -->
+    <!-- 通用包依赖 -->
+    <dependency>
+        <groupId>lhb.msos</groupId>
+        <artifactId>lhb-msos-commons</artifactId>
+        <version>${project.parent.version}</version>
+    </dependency>
+    <!-- 资源服务依赖 -->
+    <dependency>
+        <groupId>lhb.msos</groupId>
+        <artifactId>provider-security-client</artifactId>
+        <version>${project.parent.version}</version>
+    </dependency>
     <!-- Project End -->
 
     <!-- Spring Boot Begin -->
@@ -78,21 +90,6 @@
         <artifactId>spring-jdbc</artifactId>
     </dependency>
     <!-- 数据库相关DataSource End -->
-
-    <!-- github 梁鸿斌的依赖 begin -->
-    <!-- 通用包依赖 -->
-    <dependency>
-        <groupId>lhb.msos</groupId>
-        <artifactId>lhb-msos-commons</artifactId>
-        <version>${project.parent.version}</version>
-    </dependency>
-    <!-- 资源服务依赖 -->
-    <dependency>
-        <groupId>lhb.msos</groupId>
-        <artifactId>provider-security-client</artifactId>
-        <version>${project.parent.version}</version>
-    </dependency>
-    <!-- github 梁鸿斌的依赖 End -->
 
 </dependencies>
 
