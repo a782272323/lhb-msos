@@ -9,11 +9,11 @@
         <version>0.2.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>provider-gateway</artifactId>
-    <packaging>jar</packaging>
-    <name>provider-gateway</name>
+    <artifactId>provider-portal-user</artifactId>
+    <packaging>pom</packaging>
+    <name>provider-portal-user</name>
     <inceptionYear>2020-Now</inceptionYear>
-    <description>路由网关服务</description>
+    <description>用户服务，门户网页</description>
 
     <licenses>
         <license>
@@ -31,12 +31,10 @@
     </developers>
 
     <dependencies>
+        <!-- Project Begin -->
+        <!-- Project End -->
 
         <!-- Spring Boot Begin -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -45,48 +43,35 @@
         <!-- Spring Boot End -->
 
         <!-- Spring Cloud Begin -->
-        <!-- Gateway 网关 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
-        </dependency>
         <!-- Spring Cloud End -->
 
         <!-- Spring Cloud Alibaba Begin -->
-        <!-- nacos 服务注册与发现 -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <!-- Sentinel 服务限流熔断 -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-        </dependency>
-        <!-- nacos持久化sentinel服务限流熔断规则 -->
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-datasource-nacos</artifactId>
-        </dependency>
-        <!-- 远程配置中心 -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
         <!-- Spring Cloud Alibaba End -->
 
         <!-- Apache Dubbo Begin -->
         <!-- Apache Dubbo End -->
 
         <!-- github 梁鸿斌的依赖 begin -->
+        <!-- 通用包依赖 -->
+        <dependency>
+            <groupId>lhb.msos</groupId>
+            <artifactId>lhb-msos-commons</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- 资源服务依赖 -->
+        <dependency>
+            <groupId>lhb.msos</groupId>
+            <artifactId>provider-security-client</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- fegin 依赖 -->
+        <dependency>
+            <groupId>lhb.msos</groupId>
+            <artifactId>feign-user</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
         <!-- github 梁鸿斌的依赖 End -->
 
-        <!-- Commons Begin -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-        </dependency>
-        <!-- Commons Begin -->
 
     </dependencies>
 
@@ -96,7 +81,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>lhb.msos.provider.gateway.ProviderGatewayApplication</mainClass>
+                    <mainClass>lhb.msos.provider.portal.user.ProviderPortalUserApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
