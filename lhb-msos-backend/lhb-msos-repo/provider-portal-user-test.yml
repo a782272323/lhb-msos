@@ -3,14 +3,14 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.1.101:8848
+        server-addr: 172.16.253.110:8848
     sentinel:
       transport:
         # sentinel服务器地址
-        dashboard: 192.168.1.101:8858
+        dashboard: 172.16.253.110:8858
       # 取消延迟加载
       eager: false
 # 日志级别
 logging:
   level:
-    lhb.msos.provider.user: debug
+    lhb.msos.provider.portal.user: debug
