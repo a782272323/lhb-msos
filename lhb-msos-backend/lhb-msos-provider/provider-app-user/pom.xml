@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>provider-app-user</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>provider-app-user</name>
     <inceptionYear>2020-Now</inceptionYear>
     <description>用户服务，小程序</description>

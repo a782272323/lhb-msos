@@ -12,29 +12,29 @@ import org.springframework.web.bind.annotation.RestController;
  * @time 10:24
  */
 @RestController
-@RequestMapping("/app/user")
+//@RequestMapping("")
 public class TestController {
 
     /**
      * 测试不带token访问
      * @return
      */
-    @GetMapping("/web/token")
+    @GetMapping("/web/app/user/token")
     public BaseResult webToken() {
         return BaseResult.ok("小程序用户服务测试不带token访问");
     }
 
-    @GetMapping("/gateway")
+    @GetMapping("/app/user/gateway")
     public BaseResult gateway() {
         return BaseResult.ok("小程序用户服务网关测试");
     }
 
-    @GetMapping("/test01")
+    @GetMapping("/app/user/test01")
     public BaseResult test01() {
         return BaseResult.ok("小程序用户服务启动测试");
     }
 
-    @GetMapping("/feign")
+    @GetMapping("/app/user/feign")
     public BaseResult feign() {
         return BaseResult.ok("小程序用户服务feign远程调用测试");
     }

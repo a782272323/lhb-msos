@@ -4,7 +4,7 @@ server:
 spring:
   # 服务名
   application:
-    name: provider-manager-user
+    name: provider-portal-user
   cloud:
     nacos:
       config:

@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>consumer-help-center</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>consumer-help-center</name>
     <inceptionYear>2020-Now</inceptionYear>
     <description>帮助中心，包括更新日志和帮助文档</description>

@@ -12,6 +12,7 @@
 
     <artifactId>lhb-msos-commons</artifactId>
     <inceptionYear>2020-Now</inceptionYear>
+    <packaging>jar</packaging>
     <name>lhb-msos-commons</name>
     <description>通用模块</description>
 
@@ -111,12 +112,12 @@
     </developers>
 
     <!-- 发送jar到github的packages仓库 -->
-    <!--    <distributionManagement>-->
-    <!--        <repository>-->
-    <!--            <id>github</id>-->
-    <!--            <name>GitHub OWNER Apache Maven Packages</name>-->
-    <!--            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>-->
-    <!--        </repository>-->
-    <!--    </distributionManagement>-->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>
+        </repository>
+    </distributionManagement>
 
 </project>

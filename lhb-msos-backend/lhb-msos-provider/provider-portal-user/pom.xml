@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>provider-portal-user</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>provider-portal-user</name>
     <inceptionYear>2020-Now</inceptionYear>
     <description>用户服务，门户网页</description>
