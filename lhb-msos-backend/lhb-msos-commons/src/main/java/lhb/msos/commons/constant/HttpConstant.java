@@ -11,9 +11,11 @@ public class HttpConstant {
     /**
      * 200
      * 请求成功
+     * 上传成功
      */
     public static final Integer OK = 200;
     public static final String OK_MESSAGE = "请求成功";
+    public static final String UPLOAD_MESSAGE = "上传成功";
 
     /**
      * 201
@@ -35,6 +37,7 @@ public class HttpConstant {
      */
     public static final Integer DELETE = 203;
     public static final String DELETE_MESSAGE = "删除成功";
+
 
     /**
      * 401
@@ -95,9 +98,11 @@ public class HttpConstant {
     /**
      * 500
      * 服务器内部异常，请联系管理员
+     * 上传失败
      */
     public static final Integer ERROR = 500;
     public static final String ERROR_MESSAGE = "服务器内部异常，请联系管理员";
+    public static final String UPLOAD_ERROR_MESSAGE = "上传失败";
 
     /**
      * 501

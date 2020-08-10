@@ -15,8 +15,10 @@ qiniu:
   secretKey: OnN5uImn2-NS0WGbs_2zcEL8huVqF0iLjsEAB2PY
   # 存储空间名称
   bucket: lhb-msos
-  # 访问域名
-  prefix: img.782272323.cn
+  # 访问,根据机房位置从官网获取
+  prefix: http://up-z2.qiniup.com
+  # 外链域名
+  domain: http://img.782272323.cn
 # 日志级别
 logging:
   level:

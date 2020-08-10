@@ -34,6 +34,7 @@
     <modules>
         <module>provider-security-client</module> <!-- 1 -->
         <module>provider-oauth2</module> <!-- 2 -->
+        <module>provider-qiniu-upload</module>
         <module>provider-manager-user</module>
         <module>provider-portal-user</module>
         <module>provider-app-user</module>

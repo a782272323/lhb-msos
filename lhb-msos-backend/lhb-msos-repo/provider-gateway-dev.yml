@@ -35,6 +35,10 @@ spring:
           uri: lb://consumer-help-center
           predicates:
             - Path=/help/center/**
+        - id: provider-qiniu-upload
+          uri: lb://provider-qiniu-upload
+          predicates:
+            - Path=/qiniu/**
 # 配置日志级别，方别调试
 #logging:
 #  level:

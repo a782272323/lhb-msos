@@ -1,23 +1,21 @@
-package lhb.msos.provider.manager.user;
+package lhb.msos.provider.qiniu.upload;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @Description  启动类
  * @author Herbie Leung(梁鸿斌)
- * @date 2020/8/7
- * @time 10:16
+ * @date 2020/8/10
+ * @time 09:52
  */
 @SpringBootApplication
 @EnableDiscoveryClient
 @ComponentScan(basePackages = {"lhb.msos"})
-@EnableFeignClients(basePackages = "lhb.msos.feign.*")
-public class ProviderManagerUserApplication {
+public class ProviderQiniuUpload {
     public static void main(String[] args) {
-        SpringApplication.run(ProviderManagerUserApplication.class, args);
+        SpringApplication.run(ProviderQiniuUpload.class, args);
     }
 }

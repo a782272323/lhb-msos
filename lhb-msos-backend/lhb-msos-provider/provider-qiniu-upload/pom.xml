@@ -5,15 +5,15 @@
 
     <parent>
         <groupId>lhb.msos</groupId>
-        <artifactId>lhb-msos-feign</artifactId>
+        <artifactId>lhb-msos-provider</artifactId>
         <version>0.2.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>feign-user</artifactId>
+    <artifactId>provider-qiniu-upload</artifactId>
     <packaging>jar</packaging>
-    <name>feign-user</name>
+    <name>provider-qiniu-upload</name>
     <inceptionYear>2020-Now</inceptionYear>
-    <description>用户服务远程调用</description>
+    <description>使用七牛云的对象存储来做文件服务器</description>
 
     <licenses>
         <license>
@@ -44,18 +44,23 @@
             <artifactId>provider-security-client</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <!-- fegin 依赖 -->
+        <dependency>
+            <groupId>lhb.msos</groupId>
+            <artifactId>feign-user</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
         <!-- Project End -->
 
         <!-- Spring Boot Begin -->
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
         <!-- Spring Boot End -->
 
         <!-- Spring Cloud Begin -->
-        <!-- feign 依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
         <!-- Spring Cloud End -->
 
         <!-- Spring Cloud Alibaba Begin -->
@@ -64,15 +69,25 @@
         <!-- Apache Dubbo Begin -->
         <!-- Apache Dubbo End -->
 
+        <!-- other begin -->
+        <!-- 七牛依赖 -->
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>qiniu-java-sdk</artifactId>
+        </dependency>
+        <!-- other end -->
     </dependencies>
 
-    <!-- 发送jar到github的packages仓库 -->
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>
-        </repository>
-    </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>lhb.msos.provider.qiniu.upload.ProviderQiniuUpload</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

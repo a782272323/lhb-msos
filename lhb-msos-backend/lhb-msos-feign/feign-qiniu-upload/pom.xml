@@ -9,11 +9,11 @@
         <version>0.2.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>feign-user</artifactId>
+    <artifactId>feign-qiniu-upload</artifactId>
     <packaging>jar</packaging>
-    <name>feign-user</name>
+    <name>feign-qiniu-upload</name>
     <inceptionYear>2020-Now</inceptionYear>
-    <description>用户服务远程调用</description>
+    <description>七牛文件上传服务远程调用</description>
 
     <licenses>
         <license>
@@ -63,6 +63,14 @@
 
         <!-- Apache Dubbo Begin -->
         <!-- Apache Dubbo End -->
+
+        <!-- other begin -->
+        <!-- 七牛依赖 -->
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>qiniu-java-sdk</artifactId>
+        </dependency>
+        <!-- other end -->
 
     </dependencies>
 
