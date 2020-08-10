@@ -10,6 +10,13 @@ spring:
         dashboard: 192.168.1.101:8858
       # 取消延迟加载
       eager: false
+qiniu:
+  accessKey: YOVO8DBqcU5j4fbhWSLea1h_4hjiegKwFnPZLISB
+  secretKey: OnN5uImn2-NS0WGbs_2zcEL8huVqF0iLjsEAB2PY
+  # 存储空间名称
+  bucket: lhb-msos
+  # 访问域名
+  prefix: img.782272323.cn
 # 日志级别
 logging:
   level:
