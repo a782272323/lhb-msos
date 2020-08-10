@@ -36,6 +36,6 @@ spring:
           predicates:
             - Path=/help/center/**
 # 配置日志级别，方别调试
-logging:
-  level:
-    org.springframework.cloud.gateway: debug
+#logging:
+#  level:
+#    org.springframework.cloud.gateway: debug

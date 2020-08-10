@@ -1,4 +1,4 @@
-Spring:
+spring:
   # nacos 服务注册中心
   cloud:
     nacos:
@@ -10,10 +10,7 @@ Spring:
         dashboard: 192.168.1.101:8858
       # 取消延迟加载
       eager: false
-mybatis:
-  mapper-locations: classpath*:mapper/*.xml
-  type-aliases-package: lhb.msos.commons.domain, lhb.msos.provider.oauth2.domain
 # 日志级别
 logging:
   level:
-    lhb.msos.consumer.help.center: debug
+    lhb.msos.provider.qiniu.upload: debug
