@@ -34,7 +34,7 @@ public class QiniuUploadController {
      * @param file
      * @return
      */
-    @PostMapping("upload/one")
+    @PostMapping("/upload/one")
     public BaseResult uploadOne(@RequestPart("file") MultipartFile file,
                                 @RequestParam("key") String key) throws Exception{
         Map<String, Object> map = Maps.newHashMap();
@@ -51,7 +51,7 @@ public class QiniuUploadController {
      * @param key
      * @return
      */
-    @GetMapping("delete/one/{key}")
+    @GetMapping("/delete/one/{key}")
     public Response deleteOne(@PathVariable("key") String key) throws Exception{
         Map<String, Object> map = Maps.newHashMap();
         Response response = qiniuUploadService.deleteFile(key);

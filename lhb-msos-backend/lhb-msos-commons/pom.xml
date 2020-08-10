@@ -58,6 +58,9 @@
         </dependency>
         <!-- Spring Cloud Alibaba End -->
 
+        <!-- Apache Dubbo Begin -->
+        <!-- Apache Dubbo End -->
+
         <!-- Commons Begin -->
         <!-- okhttp客户端依赖 -->
         <dependency>

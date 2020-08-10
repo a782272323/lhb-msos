@@ -56,7 +56,7 @@ public class TestController {
      * @throws Exception
      */
     @PostMapping("/feign/upload")
-    public BaseResult feignUpload(@RequestParam("file") MultipartFile file,
+    public BaseResult feignUpload(@RequestPart("file") MultipartFile file,
                                   @RequestParam("key") String key) throws Exception{
         return qiniuUploadFeign.uploadOne(file, key);
     }

@@ -18,7 +18,7 @@ public class QiniuUploadFeignFallback implements QiniuUploadFeign {
 
     @Override
     public BaseResult uploadOne(MultipartFile file, String key) throws Exception {
-        return BaseResult.error("七牛文件上传服务出现异常");
+        return BaseResult.error("七牛文件上传服务出现异常了呀");
     }
 
     @Override

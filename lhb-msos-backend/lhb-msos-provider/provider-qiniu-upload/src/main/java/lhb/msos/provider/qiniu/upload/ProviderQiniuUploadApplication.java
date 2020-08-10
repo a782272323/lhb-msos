@@ -14,8 +14,8 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableDiscoveryClient
 @ComponentScan(basePackages = {"lhb.msos"})
-public class ProviderQiniuUpload {
+public class ProviderQiniuUploadApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ProviderQiniuUpload.class, args);
+        SpringApplication.run(ProviderQiniuUploadApplication.class, args);
     }
 }

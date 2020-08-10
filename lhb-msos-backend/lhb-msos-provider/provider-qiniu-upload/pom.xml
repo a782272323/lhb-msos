@@ -84,7 +84,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>lhb.msos.provider.qiniu.upload.ProviderQiniuUpload</mainClass>
+                    <mainClass>lhb.msos.provider.qiniu.upload.ProviderQiniuUploadApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
