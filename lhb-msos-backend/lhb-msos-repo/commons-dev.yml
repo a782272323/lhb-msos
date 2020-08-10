@@ -1,4 +1,9 @@
 spring:
+  # 解决远程调用上传文件的bug
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
   mvc:
     date-format: yyyy-MM-dd HH:mm:ss
   aop:

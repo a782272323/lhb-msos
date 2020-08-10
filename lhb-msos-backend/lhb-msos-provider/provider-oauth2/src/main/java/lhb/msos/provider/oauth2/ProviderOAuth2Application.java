@@ -8,6 +8,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 
 /**
  * @Description
+ * todo oauth2token校验失败仍然访问接口的问题没解决
  * @author Herbie Leung(梁鸿斌)
  * @date 2020/8/3
  * @time 00:14
