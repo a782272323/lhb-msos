@@ -111,9 +111,9 @@ public class OAuth2AuthServiceConfig extends AuthorizationServerConfigurerAdapte
                 // 令牌存储策略，存储在redis
                 .tokenStore(tokenStore())
                 //authenticationManager校验传递进来的用户是否合法
-                .authenticationManager(this.authenticationManager)
+                .authenticationManager(authenticationManager)
                 // 运行post请求访问令牌
-                .allowedTokenEndpointRequestMethods(HttpMethod.POST)
+//                .allowedTokenEndpointRequestMethods(HttpMethod.POST)
                 ;
     }
 
@@ -130,9 +130,9 @@ public class OAuth2AuthServiceConfig extends AuthorizationServerConfigurerAdapte
 
         security
                 // 开启/oauth/token_key验证端口无权限访问
-                .tokenKeyAccess("permitAll()")
+                .tokenKeyAccess("isAuthenticated()")
                 //检验服务验证的规则 必须是经过验证的用户名,密码才给你验证令牌
-                .checkTokenAccess("permitAll()")
+                .checkTokenAccess("isAuthenticated()")
                 // 允许表单验证(前端),申请令牌
                 .allowFormAuthenticationForClients()
         ;

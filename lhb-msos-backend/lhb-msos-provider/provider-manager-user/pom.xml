@@ -44,12 +44,6 @@
             <artifactId>provider-security-client</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <!-- fegin 依赖 -->
-        <dependency>
-            <groupId>lhb.msos</groupId>
-            <artifactId>feign-user</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
         <!-- 远程调用七牛文件上传服务 -->
         <dependency>
             <groupId>lhb.msos</groupId>

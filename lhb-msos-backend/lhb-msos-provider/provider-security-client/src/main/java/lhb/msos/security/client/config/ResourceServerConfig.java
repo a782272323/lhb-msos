@@ -58,8 +58,9 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
-                // 配置会话（session）何时创建以及和Spring Security怎么进行交互
-                .csrf().disable()
+                .exceptionHandling()
+                .and()
+//                .csrf().disable()
                 // 配置会话（session）何时创建以及和Spring Security怎么进行交互,这里配置不用session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
@@ -69,7 +70,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 // 门户网站前缀的接口，直接放行
                 .antMatchers("/web/**").permitAll()
                 // OPTIONS请求不需要鉴权
-                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+//                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
                 // 以下为配置所需保护的资源路径及权限，需要与认证服务器配置的授权部分对应
                 .antMatchers("/lhb/**").hasAnyAuthority("ppp")
@@ -93,8 +94,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .authenticationEntryPoint(new AuthExceptionEntryHandler())
                 // 自定义异常处理,token权限不够的处理
                 .accessDeniedHandler(new CustomAccessDeniedHandler())
-        // 在这些资源上只允许基于令牌的身份验证。(具体干哈不清楚)
-//                    .stateless(true)
+                // 在这些资源上只允许基于令牌的身份验证。(具体干哈不清楚)
+                .stateless(true)
         ;
 
     }

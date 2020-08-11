@@ -24,14 +24,14 @@ public class ResponseConstant {
     /**
      * http响应代码
      */
-    private static final String CODE = "code";
+    public static final String CODE = "code";
     /**
      * 响应信息
      */
-    private static final String MESSAGE = "message";
+    public static final String MESSAGE = "message";
     /**
      * 时间戳
      */
-    private static final String TIMESTAMP = "timestamp";
+    public static final String TIMESTAMP = "timestamp";
 
 }
