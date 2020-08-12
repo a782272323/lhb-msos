@@ -5,14 +5,14 @@
 
     <parent>
         <groupId>lhb.msos</groupId>
-        <artifactId>lhb-msos-provider</artifactId>
+        <artifactId>lhb-msos-configuration</artifactId>
         <version>0.2.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>provider-security-client</artifactId>
-    <name>provider-security-client</name>
+    <artifactId>configuration-security</artifactId>
+    <name>configuration-security</name>
     <inceptionYear>2020-Now</inceptionYear>
-    <description>资源授权服务</description>
+    <description>授权认证异常处理</description>
 
     <licenses>
         <license>

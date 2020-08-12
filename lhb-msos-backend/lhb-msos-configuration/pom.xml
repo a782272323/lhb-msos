@@ -10,11 +10,11 @@
 <!--        <relativePath>../pom.xml</relativePath>-->
     </parent>
 
-    <artifactId>lhb-msos-provider</artifactId>
+    <artifactId>lhb-msos-configuration</artifactId>
     <packaging>pom</packaging>
-    <name>lhb-msos-provider</name>
+    <name>lhb-msos-configuration</name>
     <inceptionYear>2020-now</inceptionYear>
-    <description>服务提供者模块</description>
+    <description>微服务全局异常处理模块</description>
 
     <licenses>
         <license>
@@ -32,11 +32,6 @@
     </developers>
 
     <modules>
-        <module>provider-oauth2</module>
-        <module>provider-qiniu-upload</module>
-        <module>provider-manager-user</module>
-        <module>provider-portal-user</module>
-        <module>provider-app-user</module>
-        <module>provider-gateway</module><!-- 网关一定放最后面 -->
+        <module>configuration-security</module>
     </modules>
 </project>

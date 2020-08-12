@@ -1,10 +1,11 @@
-package lhb.msos.security.client.handler;
+package lhb.msos.configuration.security.handler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lhb.msos.commons.constant.HttpConstant;
 import lhb.msos.commons.utils.BaseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 
@@ -21,6 +22,7 @@ import java.io.IOException;
  * @date 2020/7/23
  * @time 11:20
  */
+@Configuration(value = "customAccessDeniedHandler")
 public class CustomAccessDeniedHandler implements AccessDeniedHandler {
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 

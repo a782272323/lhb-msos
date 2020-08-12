@@ -1,4 +1,4 @@
-//package lhb.msos.security.client.interceptor;
+//package lhb.msos.configuration.security.interceptor;//package lhb.msos.security.client.interceptor;
 //
 //import feign.Request;
 //import feign.RequestInterceptor;

@@ -1,15 +1,20 @@
-package lhb.msos.security.client.interceptor;
+package lhb.msos.configuration.security.interceptor;
 
 
-        import feign.RequestInterceptor;
-        import feign.RequestTemplate;
-        import org.springframework.context.annotation.Configuration;
-        import org.springframework.security.core.Authentication;
-        import org.springframework.security.core.context.SecurityContext;
-        import org.springframework.security.core.context.SecurityContextHolder;
-        import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
+import feign.RequestInterceptor;
+import feign.RequestTemplate;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
 
-
+/**
+ * @Description  feign配置类
+ * @author Herbie Leung(梁鸿斌)
+ * @date 2020/8/12
+ * @time 00:16
+ */
 @Configuration
 public class OAuth2FeignAutoConfiguration implements RequestInterceptor {
 

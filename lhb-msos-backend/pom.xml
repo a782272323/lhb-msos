@@ -18,6 +18,7 @@
     <modules>
         <module>lhb-msos-dependencies</module>
         <module>lhb-msos-commons</module>
+        <module>lhb-msos-configuration</module>
         <module>lhb-msos-provider</module>
         <module>lhb-msos-feign</module>
         <module>lhb-msos-consumer</module>

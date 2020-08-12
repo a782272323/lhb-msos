@@ -19,3 +19,8 @@ spring:
           - commons.yml
           - database-redis.yml
           - database-mysql-5.7.yml
+# 获取身份认证地址
+security:
+  oauth2:
+    resource:
+      id: ${spring.application.name}

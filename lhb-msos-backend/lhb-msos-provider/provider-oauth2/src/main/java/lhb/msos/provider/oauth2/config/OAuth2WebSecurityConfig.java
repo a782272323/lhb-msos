@@ -52,7 +52,8 @@ public class OAuth2WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService())
-                .passwordEncoder(passwordEncoder());
+                .passwordEncoder(passwordEncoder())
+        ;
     }
 
     /**
@@ -73,19 +74,20 @@ public class OAuth2WebSecurityConfig extends WebSecurityConfigurerAdapter {
         );
     }
 
-//    /**
-//     * http 安全配置
-//     * @param http
-//     * @throws Exception
-//     */
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http.authorizeRequests()
-//                // 所有请求都需要鉴权
-//                .antMatchers("/oauth/**").permitAll()
-//                .anyRequest().authenticated()
-////                .and().httpBasic()
-//                .and().cors()
-//                .and().csrf().disable();
-//    }
+    /**
+     * http 安全配置
+     * @param http
+     * @throws Exception
+     */
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                // 所有请求都需要鉴权
+                .anyRequest().authenticated()
+                .antMatchers("/oauth/**").permitAll()
+                .and().httpBasic()
+                .and().cors()
+                .and().csrf().disable();
+
+    }
 }

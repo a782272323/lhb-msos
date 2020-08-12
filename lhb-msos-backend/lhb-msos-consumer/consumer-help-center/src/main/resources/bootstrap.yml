@@ -18,3 +18,9 @@ spring:
         shared-configs:
           - commons.yml
           - database-redis.yml
+# 获取身份认证地址
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:10010/oauth2/info
+      id: ${spring.application.name}

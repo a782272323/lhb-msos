@@ -38,13 +38,13 @@ public class OAuth2AuthServiceConfig extends AuthorizationServerConfigurerAdapte
     @Resource
     private AuthenticationManager authenticationManager;
 
-    @Autowired
+    @Resource
     private UserDetailsServiceImpl userDetailsService;
 
-    @Autowired
+    @Resource
     private RedisConnectionFactory redisConnectionFactory;
 
-    @Autowired
+    @Resource
     private DataSource dataSource;
 
     /**
@@ -130,7 +130,7 @@ public class OAuth2AuthServiceConfig extends AuthorizationServerConfigurerAdapte
 
         security
                 // 开启/oauth/token_key验证端口无权限访问
-                .tokenKeyAccess("isAuthenticated()")
+                .tokenKeyAccess("permitAll()")
                 //检验服务验证的规则 必须是经过验证的用户名,密码才给你验证令牌
                 .checkTokenAccess("isAuthenticated()")
                 // 允许表单验证(前端),申请令牌
