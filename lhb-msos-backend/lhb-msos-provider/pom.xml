@@ -39,4 +39,10 @@
         <module>provider-app-user</module>
         <module>provider-gateway</module><!-- 网关一定放最后面 -->
     </modules>
+
+
+    <!-- 此模块不推到github -->
+    <properties>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
 </project>

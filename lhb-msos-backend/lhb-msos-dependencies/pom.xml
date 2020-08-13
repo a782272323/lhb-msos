@@ -41,6 +41,8 @@
         <github-pageHelper.version>1.2.3</github-pageHelper.version>
         <qiniu.version>7.2.28</qiniu.version>
 
+        <!-- 此模块不推到github -->
+        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
     <licenses>
@@ -291,6 +293,7 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
 
 
 

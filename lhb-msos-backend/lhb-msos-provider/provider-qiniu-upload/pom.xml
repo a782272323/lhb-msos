@@ -90,4 +90,8 @@
         </plugins>
     </build>
 
+    <!-- 此模块不推到github -->
+    <properties>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
 </project>
