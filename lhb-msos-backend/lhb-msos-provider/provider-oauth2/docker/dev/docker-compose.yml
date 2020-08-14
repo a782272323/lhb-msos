@@ -1,0 +1,15 @@
+version: '2'
+services:
+  itoken-eureka:
+    restart: always
+    image: 192.168.1.103:3001/provider-oauth2:latest
+    container_name: provider-oauth2
+    ports:
+      - 10010:10010
+    volumes:
+      - /usr/local/docker/lhb-msos-volumes/provider-oauth2-volumes
+    networks:
+      - provider_oauth2_network
+#配置网络
+networks:
+  provider_oauth2_network:
