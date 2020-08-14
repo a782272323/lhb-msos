@@ -13,10 +13,8 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-WORKDIR /var/jenkins_home/workspace/lhb-msos-provider-oauth2/lhb-msos-backend/lhb-msos-provider/provider-oauth2
-
 RUN mkdir /app
-COPY /target/provider-oauth2-0.3.0-SNAPSHOT.jar /app/app.jar
+COPY /var/jenkins_home/workspace/lhb-msos-provider-oauth2/lhb-msos-backend/lhb-msos-provider/provider-oauth2/target/provider-oauth2-0.3.0-SNAPSHOT.jar /app/app.jar
 
 ENTRYPOINT ["dockerize", "-timeout", "2m", "-wait", "http://192.168.1.101:8848/nacos/#/login","java","-jar","/app.jar"]
 
