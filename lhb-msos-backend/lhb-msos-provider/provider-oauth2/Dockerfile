@@ -13,7 +13,12 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-RUN mkdir /app
-COPY provider-oauth2-0.3.0-SNAPSHOT.jar /app/app.jar
+VOLUME /tmp
 
-ENTRYPOINT ["java","-jar","/app.jar"]
+ARG JAR_FILE
+
+COPY /target/provider-oauth2-0.3.0-SNAPSHOT.jar app.jar
+
+ENTRYPOINT ["dockerize", "-timeout", "2m", "-wait", "http://192.168.1.101:8848/nacos/#/login","java","-jar","/app.jar"]
+
+EXPOSE 10010
