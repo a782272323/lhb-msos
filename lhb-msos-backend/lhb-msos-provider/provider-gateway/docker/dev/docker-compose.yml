@@ -7,7 +7,7 @@ services:
     ports:
       - 10020:10020
     networks:
-      - provider-gateway
+      - provider-gateway_network
 #配置网络
 networks:
   provider-gateway_network:
