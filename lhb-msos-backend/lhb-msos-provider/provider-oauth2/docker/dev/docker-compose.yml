@@ -1,6 +1,6 @@
 version: '2'
 services:
-  itoken-eureka:
+  provider_oauth2:
     restart: always
     image: 192.168.1.103:3001/provider-oauth2:latest
     container_name: provider-oauth2
