@@ -60,4 +60,5 @@ public class TestController {
                                   @RequestParam("key") String key) throws Exception{
         return qiniuUploadFeign.uploadOne(file, key);
     }
+
 }

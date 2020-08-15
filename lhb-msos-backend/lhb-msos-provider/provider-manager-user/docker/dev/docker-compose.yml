@@ -1,0 +1,13 @@
+version: '2'
+services:
+  provider_oauth2:
+    restart: always
+    image: 192.168.1.103:3001/provider-manager-user
+    container_name: provider-manager-user
+    ports:
+      - 10000:10000
+    networks:
+      - provider-manager-user_network
+#配置网络
+networks:
+  provider-manager-user_network:
