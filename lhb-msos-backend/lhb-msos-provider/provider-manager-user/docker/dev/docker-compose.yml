@@ -1,6 +1,6 @@
 version: '2'
 services:
-  provider_oauth2:
+  provider-manager-user:
     restart: always
     image: 192.168.1.103:3001/provider-manager-user
     container_name: provider-manager-user

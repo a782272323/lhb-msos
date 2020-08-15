@@ -1,0 +1,13 @@
+version: '2'
+services:
+  provider-app-user:
+    restart: always
+    image: 192.168.1.103:3001/provider-app-user
+    container_name: provider-manager-user
+    ports:
+      - 10040:10040
+    networks:
+      - provider-app-user_network
+#配置网络
+networks:
+  provider-app-user_network:
