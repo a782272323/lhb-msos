@@ -10,4 +10,4 @@ services:
       - provider-gateway
 #配置网络
 networks:
-  provider-gateway:
+  provider-gateway_network:
