@@ -1,0 +1,13 @@
+version: '2'
+services:
+  provider-gatewau:
+    restart: always
+    image: 192.168.1.103:3001/provider-gatewau
+    container_name: provider-gatewau
+    ports:
+      - 10020:10020
+    networks:
+      - provider-gatewau_network
+#配置网络
+networks:
+  provider-gatewau_network:
