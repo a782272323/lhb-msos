@@ -5,7 +5,7 @@ services:
     image: 192.168.1.103:3001/provider-qiniu-upload
     container_name: provider-qiniu-upload
     ports:
-      - 10030:10030
+      - 10050:10050
     networks:
       - provider-qiniu-upload_network
 #配置网络

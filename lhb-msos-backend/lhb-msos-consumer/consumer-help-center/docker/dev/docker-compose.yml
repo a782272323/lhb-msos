@@ -1,0 +1,13 @@
+version: '2'
+services:
+  consumer-help-center:
+    restart: always
+    image: 192.168.1.103:3001/consumer-help-center
+    container_name: consumer-help-center
+    ports:
+      - 12000:12000
+    networks:
+      - consumer-help-center
+#配置网络
+networks:
+  consumer-help-center_network:
