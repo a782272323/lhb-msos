@@ -2,7 +2,7 @@ version: '2'
 services:
   provider-portal-user:
     restart: always
-    image: 192.168.1.103:3001/provider-portal-user
+    image: ccr.ccs.tencentyun.com/lhb-msos/provider-portal-user:0.3.0
     container_name: provider-portal-user
     ports:
       - 10030:10030

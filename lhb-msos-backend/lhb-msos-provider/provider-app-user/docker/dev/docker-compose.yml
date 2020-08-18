@@ -2,7 +2,7 @@ version: '2'
 services:
   provider-app-user:
     restart: always
-    image: 192.168.1.103:3001/provider-app-user
+    image: ccr.ccs.tencentyun.com/lhb-msos/provider-app-user:0.3.0
     container_name: provider-app-user
     ports:
       - 10040:10040

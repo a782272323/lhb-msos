@@ -2,7 +2,7 @@ version: '2'
 services:
   consumer-help-center:
     restart: always
-    image: 192.168.1.103:3001/consumer-help-center
+    image: ccr.ccs.tencentyun.com/lhb-msos/consumer-help-center:0.3.0
     container_name: consumer-help-center
     ports:
       - 12000:12000

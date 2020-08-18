@@ -2,7 +2,7 @@ version: '2'
 services:
   provider-qiniu-upload:
     restart: always
-    image: 192.168.1.103:3001/provider-qiniu-upload
+    image: ccr.ccs.tencentyun.com/lhb-msos/provider-qiniu-upload:0.3.0
     container_name: provider-qiniu-upload
     ports:
       - 10050:10050
