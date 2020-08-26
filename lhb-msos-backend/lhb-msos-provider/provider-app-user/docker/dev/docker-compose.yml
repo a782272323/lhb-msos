@@ -1,0 +1,9 @@
+version: '2'
+services:
+  provider_oauth2:
+    restart: always
+    image: ccr.ccs.tencentyun.com/lhb-msos/provider-app-user:0.3.1
+    container_name: provider-app-user
+    ports:
+      - 10040:10040
+    network_mode: "host" # 与宿主机共有一个IP

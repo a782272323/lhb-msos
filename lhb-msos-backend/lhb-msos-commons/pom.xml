@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>lhb.msos</groupId>
+        <artifactId>lhb-msos-backend</artifactId>
+        <version>0.3.1-SNAPSHOT</version>
+        <!--        <relativePath>../pom.xml</relativePath>-->
+    </parent>
+
+    <artifactId>lhb-msos-commons</artifactId>
+    <packaging>pom</packaging>
+    <name>lhb-msos-commons</name>
+    <inceptionYear>2020-now</inceptionYear>
+    <description>基础服务依赖包</description>
+
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>lianghongbin</id>
+            <name>Herbie Leung</name>
+            <email>782272323@qq.com</email>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>commons-constant</module>
+        <module>commons-domain</module>
+        <module>commons-utils</module>
+        <module>commons-base</module>
+    </modules>
+
+
+    <!-- 发送jar到github的packages仓库 -->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/a782272323/lhb-msos</url>
+        </repository>
+    </distributionManagement>
+</project>

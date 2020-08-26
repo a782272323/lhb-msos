@@ -1,0 +1,9 @@
+version: '2'
+services:
+  provider_oauth2:
+    restart: always
+    image: ccr.ccs.tencentyun.com/lhb-msos/provider-oauth2:0.3.1
+    container_name: provider-oauth2
+    ports:
+      - 10010:10010
+    network_mode: "host" # 与宿主机共有一个IP

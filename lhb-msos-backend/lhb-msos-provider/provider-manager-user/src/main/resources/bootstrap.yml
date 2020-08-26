@@ -1,0 +1,32 @@
+server:
+  port: 10000
+
+spring:
+  application:
+    name: provider-manager-user
+  cloud:
+    nacos:
+      config:
+        # 测试环境选择 172.168.253.110的机子
+        # 开发环境选择 192.168.1.101的机子
+        server-addr: 192.168.1.101:8848
+        # 远程配置文件后缀名
+        file-extension: yml
+        # 命名空间
+        namespace: 3c6dbb52-ef0d-4515-90e4-ac0dd6752622
+        shared-configs:
+          - commons.yml
+          - database-redis.yml
+          - database-mysql-5.7.yml
+# 获取身份认证
+security:
+  oauth2:
+    resource:
+      id: ${spring.application.name}
+
+
+
+
+
+
+

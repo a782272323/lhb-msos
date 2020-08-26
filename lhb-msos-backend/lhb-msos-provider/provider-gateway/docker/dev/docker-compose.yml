@@ -1,0 +1,9 @@
+version: '2'
+services:
+  provider_oauth2:
+    restart: always
+    image: ccr.ccs.tencentyun.com/lhb-msos/provider-gateway:0.3.1
+    container_name: provider-gateway
+    ports:
+      - 10020:10020
+    network_mode: "host" # 与宿主机共有一个IP
