@@ -26,8 +26,8 @@ mybatis:
   type-aliases-package: lhb.msos.commons.domain, lhb.msos.provider.file.domain
 
 qiniu:
-  accessKey: YOVO8DBqcU5j4fbhWSLea1h_4hjiegKwFnPZLISB
-  secretKey: OnN5uImn2-NS0WGbs_2zcEL8huVqF0iLjsEAB2PY
+  accessKey: xxx
+  secretKey: xxx
   # 存储空间名称
   bucket: lhb-msos
   # 访问,根据机房位置从官网获取
