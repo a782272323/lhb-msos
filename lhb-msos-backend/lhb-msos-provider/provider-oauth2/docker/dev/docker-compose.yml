@@ -7,3 +7,8 @@ services:
     ports:
       - 10010:10010
     network_mode: "host" # 与宿主机共有一个IP
+    networks:
+      - provider_app_user_network
+# 配置网络
+networks:
+  provider_app_user_network:

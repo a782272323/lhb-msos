@@ -7,3 +7,8 @@ services:
     ports:
       - 10000:10000
     network_mode: "host" # 与宿主机共有一个IP
+    networks:
+      - provider_manager_user_network
+# 配置网络
+networks:
+  provider_manager_user_network:
