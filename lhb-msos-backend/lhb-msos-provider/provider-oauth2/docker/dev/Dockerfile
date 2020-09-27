@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jre
 
 # 写入作者信息
 MAINTAINER Herbie <782272323@qq.com>
