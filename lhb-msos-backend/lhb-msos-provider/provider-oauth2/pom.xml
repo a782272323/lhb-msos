@@ -92,7 +92,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>lhb.msos.provider.oauth2.ProviderOAuth2Application</mainClass>
+                    <mainClass>lhb.msos.provider.oauth2.ProviderOauth2Application</mainClass>
                 </configuration>
             </plugin>
         </plugins>
