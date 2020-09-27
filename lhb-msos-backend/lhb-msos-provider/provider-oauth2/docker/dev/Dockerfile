@@ -14,7 +14,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 #    && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 RUN mkdir /app
-COPY provider-oauth2-0.3.0-SNAPSHOT.jar /app/app.jar
+COPY provider-oauth2-0.3.1-SNAPSHOT.jar /app/app.jar
 
 ENTRYPOINT ["java","-jar","/app/app.jar"]
 
