@@ -23,7 +23,7 @@
         <spring-boot-dependencies.version>2.1.9.RELEASE</spring-boot-dependencies.version>
         <!-- Native Cloud -->
         <revision>2.2.1.RELEASE</revision>
-        <dubbo.version>2.7.6</dubbo.version>
+        <dubbo.version>2.7.15</dubbo.version>
         <spring-boot-mapper.version>2.1.5</spring-boot-mapper.version>
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
         <spring-cloud-alibaba.verion>2.1.2.RELEASE</spring-cloud-alibaba.verion>
